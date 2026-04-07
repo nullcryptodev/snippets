@@ -6,7 +6,7 @@ export const format_long_string = (str: string): string => {
   return str.length > 14 ? str.substring(0, 14) + "..." : str;
 }
 
-export function format_unix(unix_timestamp: number, usa_format: boolean = false): { time_ago: string; date: string; } {
+export const format_unix = (unix_timestamp: number, usa_format: boolean = false): { time_ago: string; date: string; } => {
   const date = new Date(unix_timestamp * 1000);
   const now = new Date();
 
